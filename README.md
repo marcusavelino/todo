@@ -12,3 +12,5 @@ Nesse projeto, utilizamos:
 Segue link para visualização: 
 
 https://todo-woad-chi.vercel.app/
+
+![todo](https://user-images.githubusercontent.com/11169770/228945245-886ab92f-f223-4c59-8262-54271a454d6c.png)
