@@ -8,6 +8,7 @@ const nextConfig = {
 }
 
 module.exports = {
+  pageExtensions: ['tsx'],
   async redirects() {
     return [
       {
