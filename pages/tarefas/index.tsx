@@ -15,11 +15,6 @@ export default function Tarefas() {
     completed: number;
   }
 
-  const [countTaks, setCountTasks] = useState({
-    total: 0,
-    completed: 0
-  } as CountTaksType)
-
   interface TasksType {
     id: string;
     checked: boolean;
@@ -27,6 +22,7 @@ export default function Tarefas() {
   }
 
   const [tasks, setTasks] = useState<TasksType[]>([]);
+  const countTaks: CountTaksType = stateTasksReduce(tasks);
 
   function handleChangeChecked(id: string, checked: boolean) {
     const newTasks = tasks.map(task => {
@@ -40,11 +36,6 @@ export default function Tarefas() {
     setTasks(newTasks);
     let stateTasks =  stateTasksReduce(tasks);
   }
-
-  useEffect(() => {
-    let stateTasks =  stateTasksReduce(tasks);
-    setCountTasks(stateTasks)
-  }, [tasks])
 
   function addNewTask(desc: string) {
     const id = uuid();
