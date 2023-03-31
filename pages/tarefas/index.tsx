@@ -39,7 +39,6 @@ export default function Tarefas() {
 
     setTasks(newTasks);
     let stateTasks =  stateTasksReduce(tasks);
-    setCountTasks(stateTasks)
   }
 
   useEffect(() => {
@@ -56,7 +55,9 @@ export default function Tarefas() {
       description: desc
     };
 
-    setTasks([...tasks, newTask])
+    setTasks((tasks) => {
+      return ([...tasks, newTask])
+    })
   }
 
   function handleDeleteTask(id: string) {
